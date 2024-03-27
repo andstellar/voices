@@ -1,0 +1,44 @@
+{
+  "name": "voices",
+  "version": "1.0.0",
+  "description": "An open source personality model based on data and made highly shareable. Includes a javascript library for easily adding a test to your website.",
+  "author": "&tellar Company",
+  "license": "CC-BY-SA-4.0",
+  "keywords": [],
+  "type": "module",
+  "source": "lib/index.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "bundle": "microbundle",
+    "check": "pnpm run check:types && pnpm run check:lint && pnpm run check:format",
+    "check:format": "prettier --check .",
+    "check:lint": "eslint lib",
+    "check:types": "tsc",
+    "dev": "web-dev-server --open --watch",
+    "fix": "pnpm run fix:lint && pnpm run fix:format",
+    "fix:format": "prettier --write .",
+    "fix:lint": "eslint lib --fix",
+    "test": "web-test-runner test/**/*.test.js --node-resolve"
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "4.3.4-fix.0",
+    "@web/test-runner": "^0.18.1",
+    "eslint": "^8.57.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.2.5",
+    "tsconfig-jsdoc": "^1.0.1",
+    "typescript": "^5.4.3",
+    "typescript-eslint": "^7.4.0"
+  }
+}
