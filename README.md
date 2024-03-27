@@ -63,3 +63,9 @@ Introverts excel in introspection and deep thinking, offering thoughtful insight
 
 ## Usage
 You are free to use the VOICES model for any purpose so long as you include attribution to `&tellar Company` and you do not misrepresent its intention.
+
+### Installation
+
+```
+npm i @andstellar/voices
+```
